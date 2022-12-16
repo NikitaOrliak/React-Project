@@ -1,13 +1,610 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding: 0;
+    background: #73C0F5;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    /* position: fixed; */
+    /* min-width: 1440px;
+    min-height: 1920px; */
+}
+
+.logo img {
+    width: 140px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px #000;
+}
+
+.menu .future img {
+    width: 30px;
+    /* display: block; */
+}
+
+/* nav { */
+    /* flex-wrap: wrap; */
+    /* min-width: 1440px; */
+    /* background-color: rgb(220, 184, 220); */
+/* } */
+
+.header {
+    /* max-width: 1440px; */
+    display: flex;
+    margin: 0 auto;
+    padding: 15px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #151B75;
+    /* position:fixed; */
+    /* width: 100%; */
+    /* background-size: 100% 100%; */
+    /* min-width: 1440px; */
+    flex-wrap: nowrap;
+    gap: 50px;
+    height: 20vh;
+}
+
+@media screen and (max-width: 600px) {
+    .menu > ul {
+        flex-wrap: wrap;
+        flex: 1;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+    
+    .menu .future {
+        display: flex;
+        justify-content: end;
+        height: 100px;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+}
+
+@media screen and (max-width: 1250px) {
+
+    .menu > ul {
+        flex-wrap: wrap;
+    }
+
+    .header {
+        flex-wrap: wrap;
+        height: 100%;
+        
+    }
+    
+    .menu .future {
+       
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        height: 100px;
+        flex-wrap: wrap;
+        flex: 1;
+    }
+
+    .user span {
+        display: inherit;
+    }
+
+    .menu {
+        /* display: flex;
+        align-items: center;
+        gap: 100px; */
+        width: 100%;
+    }
+}
+
+.logo {
+    display: flex;
+    gap: 0 10px;
+}
+
+.logo h1 {
+    /* font-size: 20px; */
+    color:#fff !important;
+    text-shadow: 2px 2px 2px #000;
+    display: flex;
+    align-items: center;
+    
+}
+
+.menu {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    /* gap: 55px; */
+}
+
+.menu ul {
+    font-style: italic;
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu ul > li {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.menu ul > li > a {
+    text-decoration: none;
+    color: #45a84a;
+    font-weight:bolder;
+    /* opacity: 1; */
+}
+
+.menu ul > li > a:hover {
+    color: rgb(27, 235, 31);
+    -moz-text-shadow:0 0 10px rgb(27, 235, 31); -webkit-text-shadow:0 0 10px rgb(27, 235, 31); text-shadow:0 0 10px rgb(27, 235, 31)
+}
+
+.menu .future {
+    display: flex;
+    gap: 0 18px;
+    
+}
+
+.menu .future > a {
+    display: inline-flex;
+    gap: 0 8px;
+    align-items: center;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 120%;
+    color:#fff !important;
+    text-shadow: 2px 2px 2px #000;
+    
+}
+
+.menu .future > a:hover {
+    text-decoration: underline;
+    text-shadow: 2px 2px 2px #000;
+}
+
+/* -------------------------------------------------------------------- */
+
+.changeChase {
+    /* background-color: rgb(220, 184, 220); */
+    display: block;
+    /* float: left; */
+    /* height: 80vh;  ??? */
+    /* width: 17vw; */
+    /* position: fixed; */
+    align-items: top;
+    justify-content: left;
+    font-style: italic;
+    height: 80vh; 
+    width: 17vw;
+    background-color: #151B75;
+}
+
+.changeChase > ul {
+    /* display: block; */
+    height: 90%;  /* ??? */
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0px;
+    padding-top: 70px;
+    /* gap: 15px; */
+
+} 
+
+.changeChase > ul > li {
+    display: flex;
+    padding: 50px 0px;
+    align-items: center;
+    /* align-items: flex-start; */
+    text-align: center;
+    justify-content: center;
+    /* justify-items: left; */
+    /* align-content: flex-start; */
+    /* margin-left: 30px; */
+    /* gap: 15px; */
+} 
+
+.changeChase > ul > li > a {
+    display: flex;
+    padding: 0px;
+    /* border: 2px solid black; */
+    text-decoration: none;
+    color: #45a84a;
+    font-weight:bolder;
+    font-size: 20px;
+} 
+
+.changeChase .additionallyInfo > p > a {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    opacity: 0.5;
+    color: rgb(251, 108, 108);
+    justify-content: center;
+    /* align-items:flex-end; */
+    /* line-height: 1em; */
+    vertical-align: bottom;
+} 
+
+.changeChase ul > li > a:hover {
+    color: rgb(27, 235, 31);
+    -moz-text-shadow:0 0 10px rgb(27, 235, 31); -webkit-text-shadow:0 0 10px rgb(27, 235, 31); text-shadow:0 0 10px rgb(27, 235, 31)
+}
+
+@media screen and (max-width: 1000px) {
+    .changeChase {
+        flex-wrap: wrap;
+        width: auto;
+        height: auto;
+    }
+
+}
+
+
+/* .cursor::before {
+    content: '>';
+} */
+
+/* ------------------------------------------------------------ */
+
+/* .testChange {
+    background-color: red;
+    height: 80vh;
+    margin: 0;
+    border: 0;
+}
+
+.testChange h1 {
+    margin: 0;
+    border: 0;
+} */
+
+.fullPage {
+    display: flex;
+}
+
+/* --------------------------------------------------------------------------- */
+
+.Description p {
+    font-size: 20px;
+}
+
+.info {
+    display: flex;
+}
+
+.text-info {
+    margin-left: 30px;
+    margin-top: 70px;
+}
+
+.Avatar {
+    padding-top: 10px;
+    width: 300px;
+    border-radius: 28px;
+}
+
+.card {
+    padding: 15px;
+    border-radius: 20px;
+    /* border: 5px solid; */
+    margin-bottom: 15px;
+    width: 650px;
+    /* display: inline-block; */
+    
+}
+
+.card > a {
+    font-size: 18px;
+    color: rgb(154, 58, 58);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.card > p > a {
+    text-decoration: none;
+    padding: 10px;
+}
+
+.GitHub > h3 > a {
+    text-decoration: none;
+    padding: 10px;
+    font-style: italic;
+}
+
+.card a:hover, .card > p > a:hover, .GitHub > h3 > a:hover {
+    text-decoration: underline;
+}
+
+.aboutMe hr {
+    margin-top: 15px;
+    padding: 1px;
+    background-color:  purple;
+    /* height: 0.4ch; */
+}
+
+.ttt {
+    display: flex;
+    justify-content: center;
+    /* text-align: center; */
+    align-items: center; /* no need actually */
+}
+
+.Table {
+    text-align: left;
+    border: 1px solid gray;
+    border-collapse: collapse;
+}
+
+.Table td, .Table th {
+    padding: 3px;
+    border: 1px solid gray;
+}
+
+.Table th {
+    background-color: rgb(91, 241, 211);
+}
+
+
+.Table td:nth-child(2) {
+    color: red;
+}
+
+.Table td:nth-child(3) {
+    color: blue;
+}
+
+.work > a > img {
+    width: 800px;
+    margin-bottom: 15px;
+}
+
+/* ----------------------------------------------------------- */
+
+.fullPageWithNavigation {
+    display: flex;
+}
+
+.fullPageWithNavigation .fullPageWoutNavigation > h1 {
+    color: white;
+    text-shadow: #000 2px 2px;
+}
+
+/* ------------------------AboutMe-------------------------- */ 
+
+.aboutMe {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 15px 30px;
+    flex-wrap: nowrap;
+    width: 83vw;
+    height: 80vh;
+    
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    /* overflow-x: hidden; */ /* Only if I need it */
+}
+
+
+/* --------------------------AppliedLogic------------------------ */
+
+.appliedLogic {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 15px 30px;
+    flex-wrap: nowrap;
+    width: 83vw;
+    height: 80vh;
+
+    align-items: left;
+    text-align: center;
+    
+}
+
+.appliedLogic > p {
+    font-size: 18px;
+    text-align: start;
+    
+    
+}
+
+.appliedLogic > p > ul > li{
+    margin: 5px 0;
+    
+}
+
+
+.appliedLogic > p > ol > li{
+    margin: 5px 0;
+    
+}
+
+.appliedLogic > p > ul > li > ol > li{
+    margin: 5px 0;
+    
+}
+
+.appliedLogic hr {
+    background-color: black;
+    border: black solid 1px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+/* --------------------------MainPage------------------------ */
+
+.mainPage {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 15px 30px;
+    flex-wrap: nowrap;
+    width: 83vw;
+    height: 80vh;
+    
+    justify-content: top;
+    align-items: center;
+    text-align: center;
+    /* overflow-x: hidden; */ /* Only if I need it */
+}
+
+.mainPage > div > p {
+    font-size: 18px;
+    padding: 5px;
+    
+    /* text-align:start; */
+    
+}
+
+.mainPage > div > p > ul > li {
+    padding: 5px;
+    padding-left: 35%;
+    
+    text-align: start;
+    margin: 10px 0;
+    list-style:inside;
+    list-style-type:" — ";
+}
+
+.mainPage > div > h3 {
+    text-decoration: underline;
+    font-size: 22px;
+}
+
+.mainPage hr {
+    background-color: black;
+    border: black solid 1px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.mainPage > p {
+    margin-top: 10%;
+    font-size: 22px;
+}
+
+.mainPage > .mainH1 {
+    margin-top: 15%;
+    font-size: 50px;
+    text-shadow: #000 2px 2px;
+}
+
+/* --------------------------SequentCalculus------------------------ */
+
+.SequentCalculus {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    padding: 15px 30px;
+    flex-wrap: nowrap;
+    width: 83vw;
+    height: 80vh;
+
+    align-items: left;
+    text-align: center;
+    
+}
+
+.SequentCalculus > p {
+    font-size: 18px;
+    text-align: start;
+    
+    
+}
+
+.SequentCalculus > p > ul > li{
+    margin: 5px 0;
+    
+}
+
+
+.SequentCalculus > p > ol > li{
+    margin: 5px 0;
+    
+}
+
+.SequentCalculus > p > ul > li > ol > li{
+    margin: 5px 0;
+    
+}
+
+.SequentCalculus hr {
+    background-color: black;
+    border: black solid 1px;
+    margin: 5px 0;
+    width: 100%;
+}
+
+.firstPNG {
+    width: 400px;
+    padding-left: 6px;
+}
+
+.secondPNG {
+    width: 200px;
+}
+
+.thirdPNG {
+    width: 60px;
+}
+
+.third2PNG {
+    width: 85px;
+}
+
+.third3PNG {
+    width: 40px;
+    padding-left: 4px;
+}
+
+.third4PNG {
+    width: 45px;
+}
+
+.third5PNG {
+    width: 45px;
+    padding-right: 5px;
+}
+
+.third6PNG {
+    width: 45px;
+    padding-right: 8px;
+}
+
+.textInPNG {
+    padding-top: 10px;
+}
+
+.third {
+    display:flex;
+}
+
+.formuls {
+    line-height: 150%;
+}
+
+.SequentCalculus > .picturePractice {
+    font-size: 0;
+    margin-bottom: 15px;
+    
+}
+
+.SequentCalculus > .picturePractice > img{
+    width: 60%;
+    
 }
