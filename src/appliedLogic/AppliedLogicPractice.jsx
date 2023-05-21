@@ -8,7 +8,7 @@ function AppliedLogicPractice() {
         <div>
             <AppliedLogicNavigation />
             </div> 
-            <div className="fullPageWoutNavigation appliedLogic">
+            <div className="fullPageWoutNavigation appliedLogic SequentCalculus">
             <h1>Практиче значення логіки</h1>
 
             <p>Для того, щоб <em>практично </em>використовувати будь-яку 
@@ -114,6 +114,7 @@ function AppliedLogicPractice() {
                     <li>Висловлюваннями на підставі принципів, законів і правил <b>науки логіки</b>.</li>
                 </ol> 
              </p>
+            
 
             </div>
             

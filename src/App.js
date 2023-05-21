@@ -3,6 +3,9 @@ import Header from "./header/Header"
 
 import MainPageInfo from "./mainPage/MainPageInfo"
 import HowToUse from "./mainPage/HowToUse"
+import MainPageFirst from "./mainPage/MainPageFirst"
+
+import Literature from "./additionalInfo/Literature"
 
 import AppliedLogicInfo from "./appliedLogic/AppliedLogicInfo"
 import AppliedLogicUses from "./appliedLogic/AppliedLogicUses"
@@ -12,9 +15,15 @@ import SequentCalculusInfo from "./sequentCalculus/SequentCalculusInfo"
 import SequentCalculusUses from "./sequentCalculus/SequentCalculusUses"
 import SequentCalculusPractice from "./sequentCalculus/SequentCalculusPractice"
 
+import QuasiPredicatesLogicInfo from "./quasiPredicatesLogic/QuasiPredicatesLogicInfo"
+import QuasiPredicatesLogicUses from "./quasiPredicatesLogic/QuasiPredicatesLogicUses"
+import QuasiPredicatesLogicPractice from "./quasiPredicatesLogic/QuasiPredicatesLogicPractice"
+import QuasiPredicatesLogicSequent from "./quasiPredicatesLogic/QuasiPredicatesLogicSequent"
+
 import AboutMe from "./aboutMe/AboutMe"
 import MyContacts from "./aboutMe/MyContacts"
 import MyWorks from "./aboutMe/MyWorks"
+
 
 
 
@@ -35,7 +44,9 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPageInfo />}></Route>
         <Route path="HowToUse" element={<HowToUse />}></Route>
-        
+        <Route path="MainPageFirst" element={<MainPageFirst />}></Route>
+
+        <Route path="Literature" element={<Literature />}></Route>
 
         <Route path="AppliedLogicInfo" element={<AppliedLogicInfo />}></Route>
         <Route path="AppliedLogicUses" element={<AppliedLogicUses />}></Route>
@@ -44,6 +55,11 @@ function App() {
         <Route path="SequentCalculusInfo" element={<SequentCalculusInfo />}></Route>
         <Route path="SequentCalculusUses" element={<SequentCalculusUses />}></Route>
         <Route path="SequentCalculusPractice" element={<SequentCalculusPractice />}></Route>
+
+        <Route path="QuasiPredicatesLogicInfo" element={<QuasiPredicatesLogicInfo />}></Route>
+        <Route path="QuasiPredicatesLogicPractice" element={<QuasiPredicatesLogicPractice />}></Route>
+        <Route path="QuasiPredicatesLogicUses" element={<QuasiPredicatesLogicUses />}></Route>
+        <Route path="QuasiPredicatesLogicSequent" element={<QuasiPredicatesLogicSequent />}></Route>
 
         <Route path="AboutMe" element={<AboutMe />}></Route>
         <Route path="MyContacts" element={<MyContacts />}></Route>

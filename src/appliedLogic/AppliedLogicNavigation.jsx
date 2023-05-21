@@ -1,6 +1,6 @@
 import React from "react"
 import App from "../App"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom"
 
 function AppliedLogicNavigation() {
 
@@ -12,40 +12,41 @@ function AppliedLogicNavigation() {
     <div className="fullPage">
       <div className="changeChase">
         <ul>
-          <li>
-            <Link
+          <li className="changeLiFirst">
+            <NavLink
               to="/AppliedLogicInfo"
               className="table"
             >
-              Прикладна логіка
-            </Link> 
+              Передмова
+            </NavLink> 
           </li>
-          <li>
-            <Link
+          <li className="changeLiFirst">
+            <NavLink
               to="/AppliedLogicUses"
               className="table"
             >
-              Логіка, <br /> 
-              Формальна логіка, <br /> 
               Прикладна логіка
-            </Link>
+              {/* , <br /> 
+              Формальна логіка, <br /> 
+              Прикладна логіка */}
+            </NavLink>
           </li>
-          <li>
-            <Link
+          <li className="changeLiFirst">
+            <NavLink
               to="/AppliedLogicPractice"
               className="table"
             >
               Практичне значення
-            </Link>
+            </NavLink>
           </li>
         </ul>
         <div className="additionallyInfo">
           <p>
             <Link
-                to="#"
+                to="/Literature"
                 className="additionalInfo"
               >
-                <span onClick={additionalInfoLock}>Додаткова інформація</span>
+                <span>Джерела</span>
               </Link>
           </p>
         </div>

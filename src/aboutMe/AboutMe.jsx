@@ -13,11 +13,11 @@ function AboutMe() {
                 <div className="Description">
                     <div className="card">
                         <div className="info">
-                            <img src={require("./imgs/me.jpg")} alt="literally me" className="Avatar" />
+                            <img src={require("./imgs/correctOne.jpg")} alt="literally me" className="Avatar" />
                             <div className="text-info">
                                 <h1>My name is Nikita</h1>
-                                <p>I'm 20 years old</p>
-                                <p><strong>That's my first React Site</strong></p>
+                                <p>I am 20 years old</p>
+                                <p><strong>I am a Front-End developer</strong></p>
                             </div>
                         </div>
                         <hr />

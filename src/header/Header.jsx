@@ -1,7 +1,8 @@
 import React from "react"
 import App from "../App"
 // import "./headerStyles.css"
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom"
+import { useLocation } from "react-router-dom";
 // import { NavLink } from "react-router-dom"
 
 function Header () {
@@ -12,6 +13,10 @@ function Header () {
   function registrationLock() {
     alert(`I will add Registration in the future...`)
   }
+
+  const location = useLocation();
+  const { pathname } = location;
+  const splitLocation = pathname.split("/");
 
   return (
 
@@ -29,19 +34,39 @@ function Header () {
           <div className="menu">
             <ul>
               <li>
-                <Link to="/">Головне меню</Link>
+                <Link to="/" className={splitLocation[1] === "" ? "newAdd" 
+                : splitLocation[1] === "HowToUse" ? "newAdd" 
+                : splitLocation[1] === "MainPageFirst" ? "newAdd"
+                : ""}>Головне меню</Link>
               </li>
               <li>
-                <Link to="/AppliedLogicInfo">Прикладна логіка</Link>
+                <Link to="/AppliedLogicInfo" className={splitLocation[1] === "AppliedLogicInfo" ? "newAdd" 
+                : splitLocation[1] === "AppliedLogicUses" ? "newAdd" 
+                : splitLocation[1] === "AppliedLogicPractice" ? "newAdd" 
+                : ""}>Прикладна логіка</Link>
               </li>
               <li>
-                <Link to="/SequentCalculusInfo">Секвенційні числення</Link>
+                <Link to="/QuasiPredicatesLogicInfo" className={splitLocation[1] === "QuasiPredicatesLogicInfo" ? "newAdd" 
+                : splitLocation[1] === "QuasiPredicatesLogicUses" ? "newAdd" 
+                : splitLocation[1] === "QuasiPredicatesLogicPractice" ? "newAdd" 
+                : splitLocation[1] === "QuasiPredicatesLogicSequent" ? "newAdd" 
+                : ""}>Логіки квазіарних предикатів</Link>
               </li>
               <li>
-                <Link to="/AboutMe">Інформація про автора</Link>
+                <Link to="/SequentCalculusInfo" className={splitLocation[1] === "SequentCalculusInfo" ? "newAdd" 
+                : splitLocation[1] === "SequentCalculusUses" ? "newAdd" 
+                : splitLocation[1] === "SequentCalculusPractice" ? "newAdd" 
+                : ""}>Нетрадиційні та модальні логіки</Link>
               </li>
+              <li>
+                <Link to="/AboutMe" className={splitLocation[1] === "AboutMe" ? "newAdd" 
+                : splitLocation[1] === "MyContacts" ? "newAdd" 
+                : splitLocation[1] === "MyWorks" ? "newAdd" 
+                : ""}>Інформація про автора</Link>
+              </li>
+              
             </ul>
-            <div className="future">
+            {/* <div className="future">
               <Link
                 to="#"
                 className="user"
@@ -65,7 +90,7 @@ function Header () {
                 />
                 <span onClick={registrationLock}>Реєстрація</span>
               </Link>
-            </div>
+            </div> */}
           </div>
         </nav>
 

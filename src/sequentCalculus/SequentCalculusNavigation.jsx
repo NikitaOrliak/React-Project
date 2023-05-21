@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom"
+import { BrowserRouter as Router, Switch, Route, Link, NavLink } from "react-router-dom"
 import MainPage from "../mainPage/MainPageNavigation";
 
 function SequentCalculusNavigation() {
@@ -12,39 +12,39 @@ function SequentCalculusNavigation() {
         <div className="fullPage">
           <div className="changeChase">
             <ul>
-              <li>
-                <Link
+              <li   className="changeLiFirst">
+                <NavLink
                   to="/SequentCalculusInfo"
                   className="table"
                 >
-                  Секвенційні числення
-                </Link> 
+                  Логіки предикатів над номінативними даними
+                </NavLink> 
               </li>
-              <li>
-              <Link
+              <li   className="changeLiFirst">
+              <NavLink
                   to="/SequentCalculusUses"
                   className="table"
                 >
-                  Побудова та <br />
-                  Практичне значення
-                </Link>
+                  Нетрадиційні логіки
+                </NavLink>
               </li>
-              <li>
-                <Link
+              <li   className="changeLiFirst">
+                <NavLink
                   to="/SequentCalculusPractice"
                   className="table"
                 >
-                  Приклади
-                </Link>
+                  Модальні <br />
+                  логіки
+                </NavLink>
               </li>
             </ul>
             <div className="additionallyInfo">
               <p>
               <Link
-                to="#"
+                to="/Literature"
                 className="additionalInfo"
               >
-                <span onClick={additionalInfoLock}>Додаткова інформація</span>
+                <span>Джерела</span>
               </Link>
               </p>
             </div>
